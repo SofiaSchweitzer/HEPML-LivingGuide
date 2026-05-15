@@ -1,0 +1,133 @@
+site_name: HEP–ML Living Guide
+site_description: A curated, community-driven field guide to machine learning for particle physics.
+site_url: https://iml-wg.github.io/HEPML-LivingGuide/
+repo_url: https://github.com/iml-wg/HEPML-LivingGuide/
+repo_name: iml-wg/HEPML-LivingGuide
+edit_uri: edit/main/docs/
+
+# ----------------------------------------------------------------------
+# Navigation
+#
+# The taxonomy follows the two independent axes described in the
+# transition paper (Sec. 3.1): HEP application and ML method, with
+# cross-links between them. Sections that don't yet have a contributor
+# can simply be omitted from the nav until they exist.
+# ----------------------------------------------------------------------
+nav:
+  - Home: index.md
+  - How to use this guide: how-to-use.md
+  - By HEP application:
+      - Overview: applications/index.md
+      - Triggering: applications/triggering.md
+      - Reconstruction: applications/reconstruction.md
+      - Simulation & fast emulation: applications/simulation.md
+      - Unfolding & inference: applications/unfolding-inference.md
+      - Anomaly detection: applications/anomaly-detection.md
+      - Phenomenology: applications/phenomenology.md
+      - Formal theory: applications/formal-theory.md
+      - Lattice QCD: applications/lattice.md
+  - By ML method:
+      - Overview: methods/index.md
+      - Equivariant & geometric architectures: methods/equivariant-geometric.md
+      - Generative models: methods/generative.md
+      - Simulation-based inference: methods/sbi.md
+      - Uncertainty quantification & calibration: methods/uncertainty.md
+      - Differentiable programming: methods/differentiable.md
+      - Foundation models: methods/foundation-models.md
+  - Resources:
+      - Reviews & lecture notes: resources/reviews-lectures.md
+      - Benchmarks & datasets: resources/benchmarks.md
+      - Community challenges: resources/challenges.md
+      - Related living resources: resources/related.md
+  - Contribute: contribute.md
+  - About:
+      - About the Guide: about.md
+      - The archived Living Review: archived-review.md
+      - Code of conduct: code-of-conduct.md
+      - Cite us: cite.md
+
+# ----------------------------------------------------------------------
+# Theme
+# ----------------------------------------------------------------------
+theme:
+  name: material
+  language: en
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - toc.follow
+    - search.share
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Inter
+    code: Geist Mono
+
+# ----------------------------------------------------------------------
+# Markdown extensions
+# ----------------------------------------------------------------------
+markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - admonition
+  - attr_list
+  - md_in_html
+  - footnotes
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/iml-wg/HEPML-LivingGuide
+  generator: false
+
+copyright: >
+  The HEP–ML Living Guide is a community-maintained resource by the
+  <a href="https://iml-wg.web.cern.ch/">IML Working Group</a>.
+  Content is licensed CC BY 4.0.

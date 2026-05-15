@@ -1,0 +1,354 @@
+/* ============================================================
+   HEP–ML Living Guide — custom theme
+   Aesthetic: modern docs (Vercel / Astro / Linear). Restrained
+   palette, generous spacing, flat surfaces, subtle borders.
+   ============================================================ */
+
+/* ---------- Color tokens ----------------------------------- */
+:root {
+  /* Primary: near-black charcoal (instead of saturated indigo) */
+  --md-primary-fg-color:           #1a1a1a;
+  --md-primary-fg-color--light:    #2d2d2d;
+  --md-primary-fg-color--dark:     #0a0a0a;
+  --md-primary-bg-color:           #ffffff;
+  --md-primary-bg-color--light:    #ffffffbf;
+
+  /* Accent: warm amber, used sparingly for links and emphasis */
+  --md-accent-fg-color:            #b45309;
+  --md-accent-fg-color--transparent: #b4530914;
+  --md-accent-bg-color:            #ffffff;
+  --md-accent-bg-color--light:     #ffffffbf;
+
+  /* Typeset link color follows accent */
+  --md-typeset-a-color:            #b45309;
+
+  /* Surface tokens — flat, off-white, with hairline borders */
+  --hg-surface:                    #fafaf9;
+  --hg-surface-hover:              #f5f5f4;
+  --hg-border:                     #e7e5e4;
+  --hg-border-strong:              #d6d3d1;
+  --hg-text-muted:                 #57534e;
+  --hg-text-faint:                 #78716c;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:           #0a0a0a;
+  --md-primary-fg-color--light:    #171717;
+  --md-primary-fg-color--dark:     #000000;
+  --md-primary-bg-color:           #ffffffe6;
+  --md-primary-bg-color--light:    #ffffff99;
+
+  --md-accent-fg-color:            #f59e0b;
+  --md-accent-fg-color--transparent: #f59e0b1a;
+
+  --md-typeset-a-color:            #fbbf24;
+
+  --md-default-bg-color:           #0c0c0c;
+  --md-default-fg-color:           #e7e5e4;
+  --md-default-fg-color--light:    #d6d3d1;
+  --md-default-fg-color--lighter:  #a8a29e;
+  --md-default-fg-color--lightest: #57534e;
+
+  --md-code-bg-color:              #18181b;
+  --md-code-fg-color:              #e7e5e4;
+
+  --hg-surface:                    #161616;
+  --hg-surface-hover:              #1f1f1f;
+  --hg-border:                     #262626;
+  --hg-border-strong:              #404040;
+  --hg-text-muted:                 #a8a29e;
+  --hg-text-faint:                 #78716c;
+}
+
+/* ---------- Typography ------------------------------------- */
+body, .md-typeset {
+  font-feature-settings: "ss01", "cv11", "calt";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.md-typeset {
+  font-size: 0.78rem;        /* ~15.6px — closer to Vercel-style docs */
+  line-height: 1.7;
+  letter-spacing: -0.003em;
+}
+
+.md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4 {
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.md-typeset h1 {
+  font-size: 2.1rem;
+  line-height: 1.15;
+  margin: 0 0 1.5rem;
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset h2 {
+  font-size: 1.4rem;
+  margin: 2.5rem 0 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--hg-border);
+}
+
+.md-typeset h3 {
+  font-size: 1.05rem;
+  margin: 1.75rem 0 0.75rem;
+}
+
+/* Slightly tighter code font */
+.md-typeset code,
+.md-typeset pre {
+  font-size: 0.82em;
+  font-feature-settings: "calt", "ss01";
+}
+
+.md-typeset :not(pre) > code {
+  padding: 0.1em 0.4em;
+  border-radius: 0.25rem;
+  background: var(--hg-surface);
+  border: 1px solid var(--hg-border);
+}
+
+/* ---------- Header (nav bar) ------------------------------- */
+.md-header {
+  background: var(--md-default-bg-color, #fff);
+  color: var(--md-default-fg-color);
+  box-shadow: none;
+  border-bottom: 1px solid var(--hg-border);
+}
+
+.md-header[hidden] { display: none; }
+
+.md-header__title {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.md-tabs {
+  background: var(--md-default-bg-color, #fff);
+  color: var(--md-default-fg-color);
+  border-bottom: 1px solid var(--hg-border);
+}
+
+.md-tabs__link {
+  opacity: 0.7;
+  font-weight: 500;
+  font-size: 0.74rem;
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  opacity: 1;
+}
+
+/* Make the logo render at a reasonable size, currentColor */
+.md-header__button.md-logo svg,
+.md-header__button.md-logo img {
+  height: 1.5rem;
+  width: auto;
+}
+
+/* ---------- Content area ----------------------------------- */
+.md-main__inner {
+  margin-top: 1.5rem;
+}
+
+.md-content {
+  max-width: 48rem;
+}
+
+.md-content__inner {
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+}
+
+.md-content__inner:before { display: none; }  /* remove the empty spacer */
+
+/* ---------- Links ------------------------------------------ */
+.md-typeset a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 150ms ease, color 150ms ease;
+}
+
+.md-typeset a:hover {
+  border-bottom-color: currentColor;
+}
+
+/* ---------- Admonitions (note / abstract / info) ----------- */
+.md-typeset .admonition,
+.md-typeset details {
+  border: 1px solid var(--hg-border);
+  border-left-width: 1px;
+  border-radius: 0.5rem;
+  box-shadow: none;
+  background: var(--hg-surface);
+  font-size: 0.78rem;
+}
+
+.md-typeset .admonition-title,
+.md-typeset summary {
+  background: transparent;
+  font-weight: 600;
+  padding-top: 0.6rem;
+  padding-bottom: 0.4rem;
+}
+
+.md-typeset .admonition-title::before,
+.md-typeset summary::before {
+  background-color: var(--md-default-fg-color);
+}
+
+/* Info-style admonitions get an amber title icon */
+.md-typeset .admonition.info > .admonition-title::before,
+.md-typeset .admonition.abstract > .admonition-title::before,
+.md-typeset details.info > summary::before,
+.md-typeset details.abstract > summary::before {
+  background-color: var(--md-accent-fg-color);
+}
+
+/* ---------- Tables ----------------------------------------- */
+.md-typeset table:not([class]) {
+  font-size: 0.76rem;
+  border: 1px solid var(--hg-border);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--hg-surface);
+  font-weight: 600;
+  border-bottom: 1px solid var(--hg-border);
+}
+
+.md-typeset table:not([class]) td {
+  border-top: 1px solid var(--hg-border);
+}
+
+/* ---------- Grid cards (homepage feature blocks) ----------- */
+.md-typeset .grid.cards > :is(ul, ol) > li,
+.md-typeset .grid > .card {
+  border: 1px solid var(--hg-border);
+  border-radius: 0.6rem;
+  padding: 1.25rem 1.25rem 1rem;
+  box-shadow: none;
+  background: transparent;
+  transition: border-color 180ms ease, background 180ms ease;
+}
+
+.md-typeset .grid.cards > :is(ul, ol) > li:hover,
+.md-typeset .grid > .card:hover {
+  border-color: var(--hg-border-strong);
+  background: var(--hg-surface);
+  transform: none;
+  box-shadow: none;
+}
+
+.md-typeset .grid.cards > :is(ul, ol) > li > hr {
+  display: none;
+}
+
+.md-typeset .grid.cards > :is(ul, ol) > li > p:first-child {
+  font-weight: 600;
+  font-size: 0.86rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset .grid.cards > :is(ul, ol) > li > p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Sidebar / nav ---------------------------------- */
+.md-nav__title {
+  font-weight: 600;
+  font-size: 0.74rem;
+  letter-spacing: -0.005em;
+  color: var(--md-default-fg-color);
+}
+
+.md-nav__item .md-nav__link {
+  font-size: 0.74rem;
+}
+
+.md-nav__link--active,
+.md-nav__item--active > .md-nav__link {
+  color: var(--md-accent-fg-color) !important;
+  font-weight: 600;
+}
+
+.md-nav__link[for]:focus,
+.md-nav__link:focus,
+.md-nav__link:hover {
+  color: var(--md-accent-fg-color);
+}
+
+/* ---------- Footer ----------------------------------------- */
+.md-footer {
+  background: var(--md-default-bg-color, #fff);
+  color: var(--hg-text-muted);
+  border-top: 1px solid var(--hg-border);
+}
+
+.md-footer-meta {
+  background: transparent;
+}
+
+.md-footer-meta .md-footer-copyright {
+  color: var(--hg-text-muted);
+  font-size: 0.7rem;
+}
+
+.md-footer-meta__inner {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* ---------- Search input ----------------------------------- */
+.md-search__form {
+  background: var(--hg-surface);
+  border: 1px solid var(--hg-border);
+  border-radius: 0.4rem;
+}
+
+.md-search__form:hover {
+  background: var(--hg-surface-hover);
+  border-color: var(--hg-border-strong);
+}
+
+/* ---------- Custom homepage hero --------------------------- */
+.hg-hero {
+  padding: 2.5rem 0 1.5rem;
+  border-bottom: 1px solid var(--hg-border);
+  margin-bottom: 2.5rem;
+}
+
+.hg-hero h1 {
+  font-size: 2.4rem;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin: 0 0 1rem;
+  font-weight: 700;
+}
+
+.hg-hero p.hg-lead {
+  font-size: 1rem;
+  color: var(--hg-text-muted);
+  margin: 0 0 1.25rem;
+  max-width: 36rem;
+  line-height: 1.55;
+}
+
+.hg-hero .hg-eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--md-accent-fg-color);
+  margin-bottom: 0.75rem;
+}
