@@ -44,7 +44,7 @@ rationale.
 ## Local preview
 
 ```bash
-git clone https://github.com/iml-wg/HEPML-LivingGuide.git
+git clone git@github.com:iml-wg/HEPML-LivingGuide.git
 cd HEPML-LivingGuide
 pip install -r requirements.txt
 mkdocs serve
