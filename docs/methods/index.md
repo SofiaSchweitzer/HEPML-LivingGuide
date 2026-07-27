@@ -12,6 +12,7 @@ instead.
 - [Uncertainty quantification & calibration](uncertainty.md) — calibrated predictions, conformal methods, Bayesian deep learning
 - [Differentiable programming](differentiable.md) — end-to-end optimisation through simulators and analysis pipelines
 - [Foundation models](foundation-models.md) — large pre-trained models for collider and detector data
+- [Agentic workflows](agents.md) — autonomous agents performing tasks
 
 !!! note "Some sections may be empty for now"
     The Guide is community-written. A section appears here once a contributor has
