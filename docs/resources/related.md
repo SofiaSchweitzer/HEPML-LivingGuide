@@ -16,7 +16,7 @@ here — they are covered better by the people who work in them.
 - **Awesome Astrodata**, Michael Gully-Santiago —
   <https://github.com/gully/awesome-astrodata> — astronomical data science.
 - **The AI/ML for Particle Accelerators Living Review** —
-  <https://ml-accel-review.org> — accelerator design, operation, and controls.
+  <https://aghribi.github.io/acc-ml-living-review/> — accelerator design, operation, and controls.
 
 ## Neighboring HEP resources
 
