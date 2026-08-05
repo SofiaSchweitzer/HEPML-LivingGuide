@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{#
+  Declare the icon set explicitly.
+
+  Without these, browsers fall back to probing fixed root paths and log 404s
+  for /apple-touch-icon.png, /apple-touch-icon-precomposed.png and
+  /favicon.ico. The files exist at the root as a safety net, but declaring
+  them here means the probing requests are never made in the first place.
+
+  theme.favicon in mkdocs.yml still emits the SVG link; these are additions.
+#}
+{% block extrahead %}
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ base_url }}/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ base_url }}/assets/favicon-32.png">
+  <link rel="alternate icon" type="image/x-icon" href="{{ base_url }}/favicon.ico">
+{% endblock %}

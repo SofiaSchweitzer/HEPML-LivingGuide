@@ -11,11 +11,27 @@ transition paper that introduced this resource:
    with a short explanation of what it establishes and how it relates to adjacent
    work. A list of links without context is a search result, not a guide.
 4. **Complement INSPIRE-HEP and arXiv, do not compete with them.** Comprehensive
-   bibliographic search already exists. The Guide provides what those tools do
-   not: structured context and explicit guidance on where to start.
+   bibliographic search already exists and works well. Finding papers is your
+   job and the search engines' job; the Guide's job is telling you which few are
+   worth reading first, and why. It provides what those tools do not: structured
+   context and explicit guidance on where to start.
 5. **Sustainability by design.** Sections are written as named, timestamped
-   one-time contributions. They remain stable until a new contribution updates
-   them.
+   one-time contributions and remain stable until a new contribution updates them.
+   A stale bibliography is merely incomplete; a stale guide is misleading, so every
+   section displays when it was last reviewed and automatically carries a notice
+   once that is more than **12 months** ago. You should never have to guess the
+   vintage of a recommendation.
+
+## Scope
+
+The Guide covers machine learning for **particle physics**: collider physics and
+phenomenology, formal and theoretical particle physics, lattice field theory, and
+neutrino physics.
+
+Nuclear and heavy-ion physics, astroparticle physics, cosmology, astronomical data
+science, accelerator ML, and generic ML methodology with no particle-physics
+content are deliberately out of scope — see [About](about.md) for the reasoning,
+and [Related resources](resources/related.md) for where to go instead.
 
 ## What you'll find in each section
 
@@ -31,10 +47,11 @@ Each topical section follows a consistent structure:
 
 ## What you will *not* find
 
-- A complete bibliography. For that, consult INSPIRE-HEP, arXiv, or the
-  [archived Living Review](archived-review.md).
+- A complete bibliography, or any attempt at one. For that, use INSPIRE-HEP,
+  arXiv, or the [archived Living Review](archived-review.md). Those tools are
+  good at finding papers and this resource is not trying to be.
 - Peer review. Curation here is editorial, not adjudicative — inclusion is not an
-  endorsement and exclusion is not a judgement of quality.
+  endorsement and exclusion is not a judgment of quality.
 - Real-time freshness. Sections are timestamped. If a section is older than you'd
   like, the right response is to [contribute an update](contribute.md).
 

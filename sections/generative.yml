@@ -1,0 +1,38 @@
+# ---------------------------------------------------------------------------
+# Section registry entry.
+#
+# This file holds the section's metadata: who wrote it and when it was last
+# reviewed. The status banner and the staleness notice on the rendered page are
+# generated from this file by hooks/section_status.py -- do not hand-write them
+# into the Markdown. A "last updated" line a contributor has to remember to edit
+# is a line that goes stale silently.
+# ---------------------------------------------------------------------------
+
+id: generative
+title: "Generative models"
+axis: method
+page: docs/methods/generative.md
+
+# stub | draft | published
+status: published
+
+# Named authors of the current version. An empty list renders as "unclaimed".
+authors:
+  - name: Claudius Krause
+    affiliation: Marietta Blau Institute for Particle Physics, Austrian Academy of Sciences
+    orcid: 0000-0003-0924-3036
+  - name: Ramon Winterhalder
+    affiliation: Università degli Studi di Milano & INFN Sezione di Milano
+    orcid: 0000-0002-9902-578X
+
+# GitHub handles of people willing to be contacted when the section falls due
+# for review. Stewardship is transferable and can be handed back at any time.
+stewards: []
+#  - claudiuskrause      # TODO: add your GitHub handles so the 12-month
+#  - ramonwinterhalder   #       review notice can actually reach you
+
+# ISO date of the last substantive review. `null` means never written.
+last_reviewed: 2026-08-05
+
+# Months before the staleness notice appears. Overrides the site default of 12.
+review_interval_months: null

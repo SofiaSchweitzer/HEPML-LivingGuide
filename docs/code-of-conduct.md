@@ -9,11 +9,11 @@ In short:
 - Be respectful and constructive in discussions and reviews.
 - Disagreements on inclusion criteria, scope, or wording are normal — handle
   them on technical grounds.
-- Harassment, personal attacks, and discriminatory behaviour are not tolerated.
+- Harassment, personal attacks, and discriminatory behavior are not tolerated.
 
 ## Reporting
 
-If you experience or witness behaviour that violates the code of conduct, please
+If you experience or witness behavior that violates the code of conduct, please
 contact the maintainers privately. Contact details are listed on the
 [About](about.md) page.
 

@@ -13,14 +13,29 @@
   --md-primary-bg-color:           #ffffff;
   --md-primary-bg-color--light:    #ffffffbf;
 
-  /* Accent: warm amber, used sparingly for links and emphasis */
-  --md-accent-fg-color:            #b45309;
-  --md-accent-fg-color--transparent: #b4530914;
+  /* ---- Accent -------------------------------------------------------
+     Teal, chosen to match the EmeraldGreen (#1ea78d) that the transition
+     paper uses for citations and URLs, so the paper and the site read as
+     one resource.
+
+     To try a different hue, swap the four --hg-link* values here and the
+     two in the slate block below. Tested alternatives:
+       cyan-blue  light #0369a1 / underline #0369a159 / dark #7dd3fc
+       indigo     light #4338ca / underline #4338ca59 / dark #a5b4fc
+     Crimson is deliberately avoided: red is doing semantic work in the
+     staleness warnings, and a red link would collide with it.
+     ------------------------------------------------------------------- */
+  --hg-link:                       #0f766e;
+  --hg-link-hover:                 #115e59;
+  --hg-link-underline:             #0f766e59;
+  --hg-link-visited:               #155e63;
+
+  --md-accent-fg-color:            var(--hg-link-hover);
+  --md-accent-fg-color--transparent: #0f766e14;
   --md-accent-bg-color:            #ffffff;
   --md-accent-bg-color--light:     #ffffffbf;
 
-  /* Typeset link color follows accent */
-  --md-typeset-a-color:            #b45309;
+  --md-typeset-a-color:            var(--hg-link);
 
   /* Surface tokens — flat, off-white, with hairline borders */
   --hg-surface:                    #fafaf9;
@@ -31,6 +46,19 @@
   --hg-text-faint:                 #78716c;
 }
 
+/* Material declares
+     :root,[data-md-color-scheme=default] { --md-typeset-a-color: var(--md-primary-fg-color) }
+   which ties with a bare :root on specificity. Redeclaring on the same
+   attribute selector guarantees the cascade lands our way in light mode. */
+[data-md-color-scheme="default"] {
+  --hg-link:                       #0f766e;
+  --hg-link-hover:                 #115e59;
+  --hg-link-underline:             #0f766e59;
+  --md-accent-fg-color:            var(--hg-link-hover);
+  --md-accent-fg-color--transparent: #0f766e14;
+  --md-typeset-a-color:            var(--hg-link);
+}
+
 [data-md-color-scheme="slate"] {
   --md-primary-fg-color:           #0a0a0a;
   --md-primary-fg-color--light:    #171717;
@@ -38,10 +66,17 @@
   --md-primary-bg-color:           #ffffffe6;
   --md-primary-bg-color--light:    #ffffff99;
 
-  --md-accent-fg-color:            #f59e0b;
-  --md-accent-fg-color--transparent: #f59e0b1a;
+  /* Lighter, less saturated in dark mode so links stay legible without
+     glowing against the near-black background. */
+  --hg-link:                       #2dd4bf;
+  --hg-link-hover:                 #99f6e4;
+  --hg-link-underline:             #2dd4bf59;
+  --hg-link-visited:               #2dd4bf;
 
-  --md-typeset-a-color:            #fbbf24;
+  --md-accent-fg-color:            var(--hg-link-hover);
+  --md-accent-fg-color--transparent: #2dd4bf1a;
+
+  --md-typeset-a-color:            var(--hg-link);
 
   --md-default-bg-color:           #0c0c0c;
   --md-default-fg-color:           #e7e5e4;
@@ -143,11 +178,52 @@ body, .md-typeset {
   opacity: 1;
 }
 
-/* Make the logo render at a reasonable size, currentColor */
+/* ---------- Logo -------------------------------------------
+   Material renders theme.logo as a plain <img src>, so an external SVG
+   cannot inherit currentColor and only one file can be configured. To get a
+   genuinely different mark per scheme, the <img> is used for layout and
+   hidden visually, and the artwork is painted as a background on the
+   button itself, swapped by the scheme attribute.
+
+   Accessibility is unaffected: Material already puts the accessible name on
+   the surrounding anchor (aria-label), not on the img, so hiding the img
+   costs nothing. The img is kept in flow rather than display:none so the
+   button keeps its intrinsic size while the sheet is still loading.
+   ------------------------------------------------------------ */
+.md-header__button.md-logo,
+.md-nav__button.md-logo {
+  background-image: url("../assets/logo-light.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+[data-md-color-scheme="slate"] .md-header__button.md-logo,
+[data-md-color-scheme="slate"] .md-nav__button.md-logo {
+  background-image: url("../assets/logo-dark.png");
+}
+
+.md-header__button.md-logo img,
 .md-header__button.md-logo svg,
-.md-header__button.md-logo img {
-  height: 1.5rem;
-  width: auto;
+.md-nav__button.md-logo img,
+.md-nav__button.md-logo svg {
+  opacity: 0;
+}
+
+/* The lockup is roughly 1.43:1, so at Material's default 1.2rem height the
+   wizard would be about eight pixels tall. Given the extra width, the header
+   button is widened and raised rather than letting the mark shrink. */
+.md-header__button.md-logo {
+  width: 2.6rem;
+  height: 1.85rem;
+  padding: 0;
+  margin-right: 0.4rem;
+}
+
+.md-nav__button.md-logo {
+  width: 3.4rem;
+  height: 2.4rem;
+  padding: 0;
 }
 
 /* ---------- Content area ----------------------------------- */
@@ -167,22 +243,93 @@ body, .md-typeset {
 .md-content__inner:before { display: none; }  /* remove the empty spacer */
 
 /* ---------- Links ------------------------------------------ */
+/* Inline links must be identifiable without hovering. The previous rule
+   used a transparent bottom border that only appeared on :hover, which
+   means a mouse user had to guess and a keyboard or touch user got no cue
+   at all. Color alone is also not a sufficient signal (WCAG 1.4.1), so
+   every link carries a permanent underline; hover and focus strengthen it
+   rather than introduce it. */
 .md-typeset a {
+  color: var(--hg-link);
+  text-decoration: underline;
+  text-decoration-color: var(--hg-link-underline);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-skip-ink: auto;
+  transition: color 120ms ease, text-decoration-color 120ms ease;
+}
+
+.md-typeset a:hover,
+.md-typeset a:focus-visible {
+  color: var(--hg-link-hover);
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 2px;
+}
+
+.md-typeset a:focus-visible {
+  outline: 2px solid var(--hg-link-hover);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Structural links are not prose links: heading anchors, buttons, the
+   "edit this page" pencil and grid cards should stay undecorated. */
+.md-typeset a.headerlink,
+.md-typeset a.md-button,
+.md-typeset .grid.cards a,
+.md-typeset .md-content__button,
+.md-typeset figure a,
+.md-typeset .md-nav a {
   text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 150ms ease, color 150ms ease;
 }
 
-.md-typeset a:hover {
-  border-bottom-color: currentColor;
+.md-typeset .grid.cards a:hover {
+  text-decoration: underline;
+  text-decoration-color: currentColor;
 }
 
-/* ---------- Admonitions (note / abstract / info) ----------- */
+/* Bibliography entries are dense with links; a slightly lighter underline
+   keeps the annotation readable without losing the affordance. */
+.md-typeset li > a:only-of-type {
+  text-decoration-color: var(--hg-link-underline);
+}
+
+/* ---------- Admonitions (highlight boxes) ------------------
+   Material ships a different hue for every admonition type, which against a
+   teal accent reads as a rainbow. Restricted here to four roles that are
+   actually used on this site, built around the accent:
+
+     abstract  teal      — section status, the accent itself
+     note      slate     — neutral asides, deliberately quiet
+     info      cyan      — adjacent to teal, one step cooler
+     warning   amber     — the staleness notice; complementary to teal, so it
+                           reads as "attention" without competing with links
+
+   Red is left unused: nothing on this site is an error, and reserving it
+   keeps it available if something ever is.
+   ------------------------------------------------------------ */
+:root,
+[data-md-color-scheme="default"] {
+  --hg-adm-abstract:  #0f766e;
+  --hg-adm-note:      #475569;
+  --hg-adm-info:      #0e7490;
+  --hg-adm-warning:   #b45309;
+  --hg-adm-tint:      6%;
+}
+
+[data-md-color-scheme="slate"] {
+  --hg-adm-abstract:  #2dd4bf;
+  --hg-adm-note:      #94a3b8;
+  --hg-adm-info:      #22d3ee;
+  --hg-adm-warning:   #fbbf24;
+  --hg-adm-tint:      10%;
+}
+
 .md-typeset .admonition,
 .md-typeset details {
   border: 1px solid var(--hg-border);
-  border-left-width: 1px;
-  border-radius: 0.5rem;
+  border-left: 3px solid var(--hg-adm-note);
+  border-radius: 0 0.5rem 0.5rem 0;
   box-shadow: none;
   background: var(--hg-surface);
   font-size: 0.78rem;
@@ -196,17 +343,53 @@ body, .md-typeset {
   padding-bottom: 0.4rem;
 }
 
+/* Material draws the type icon as a mask, so it is recoloured with
+   background-color rather than color. */
 .md-typeset .admonition-title::before,
 .md-typeset summary::before {
-  background-color: var(--md-default-fg-color);
+  background-color: var(--hg-adm-note);
 }
 
-/* Info-style admonitions get an amber title icon */
-.md-typeset .admonition.info > .admonition-title::before,
+.md-typeset .admonition.abstract,
+.md-typeset details.abstract {
+  border-left-color: var(--hg-adm-abstract);
+  background: color-mix(in srgb, var(--hg-adm-abstract) var(--hg-adm-tint), var(--hg-surface));
+}
 .md-typeset .admonition.abstract > .admonition-title::before,
-.md-typeset details.info > summary::before,
 .md-typeset details.abstract > summary::before {
-  background-color: var(--md-accent-fg-color);
+  background-color: var(--hg-adm-abstract);
+}
+
+.md-typeset .admonition.info,
+.md-typeset details.info,
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+  border-left-color: var(--hg-adm-info);
+  background: color-mix(in srgb, var(--hg-adm-info) var(--hg-adm-tint), var(--hg-surface));
+}
+.md-typeset .admonition.info > .admonition-title::before,
+.md-typeset details.info > summary::before,
+.md-typeset .admonition.tip > .admonition-title::before,
+.md-typeset details.tip > summary::before {
+  background-color: var(--hg-adm-info);
+}
+
+/* The 12-month staleness notice. Amber rather than red: it is a caveat about
+   vintage, not a failure, and it must remain visually distinct from links. */
+.md-typeset .admonition.warning,
+.md-typeset details.warning {
+  border-left-color: var(--hg-adm-warning);
+  background: color-mix(in srgb, var(--hg-adm-warning) var(--hg-adm-tint), var(--hg-surface));
+}
+.md-typeset .admonition.warning > .admonition-title::before,
+.md-typeset details.warning > summary::before {
+  background-color: var(--hg-adm-warning);
+}
+
+/* Links inside a tinted box keep the accent, but the underline is lightened
+   so dense reference lists stay legible against the tint. */
+.md-typeset .admonition a {
+  text-decoration-color: color-mix(in srgb, var(--hg-link) 45%, transparent);
 }
 
 /* ---------- Tables ----------------------------------------- */
@@ -275,16 +458,30 @@ body, .md-typeset {
   font-size: 0.74rem;
 }
 
+/* Only the page you are actually on is teal. Material also puts
+   .md-nav__item--active on every ancestor, so coloring that made the
+   parent section look like a second active link. Ancestors instead get
+   normal foreground color at a heavier weight — present, not clickable-
+   looking. */
 .md-nav__link--active,
-.md-nav__item--active > .md-nav__link {
-  color: var(--md-accent-fg-color) !important;
+.md-nav__item--active > .md-nav__link--active {
+  color: var(--hg-link) !important;
   font-weight: 600;
+}
+
+.md-nav__item--active > .md-nav__link:not(.md-nav__link--active) {
+  color: var(--md-default-fg-color);
+  font-weight: 600;
+}
+
+.md-nav__item--nested > .md-nav__link {
+  font-weight: 500;
 }
 
 .md-nav__link[for]:focus,
 .md-nav__link:focus,
 .md-nav__link:hover {
-  color: var(--md-accent-fg-color);
+  color: var(--hg-link-hover);
 }
 
 /* ---------- Footer ----------------------------------------- */
@@ -306,6 +503,17 @@ body, .md-typeset {
 .md-footer-meta__inner {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+/* Footer links: Material colors these with a higher-specificity rule, so
+   they need matching specificity or they end up underlined but gray. */
+html .md-footer-meta.md-typeset a {
+  color: var(--hg-link);
+}
+
+html .md-footer-meta.md-typeset a:focus,
+html .md-footer-meta.md-typeset a:hover {
+  color: var(--hg-link-hover);
 }
 
 /* ---------- Search input ----------------------------------- */
@@ -349,6 +557,6 @@ body, .md-typeset {
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--md-accent-fg-color);
+  color: var(--md-typeset-a-color);
   margin-bottom: 0.75rem;
 }

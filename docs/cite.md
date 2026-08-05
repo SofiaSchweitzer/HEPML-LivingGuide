@@ -30,4 +30,8 @@ section, reference its URL and contributor:
 ## Citing the archived Living Review
 
 For citations of the predecessor resource, see
-[The archived Living Review](archived-review.md).
+[The archived Living Review](archived-review.md). In short: cite
+[arXiv:2102.02770](https://arxiv.org/abs/2102.02770) for the methodology, and the
+[Zenodo record](https://zenodo.org/records/21626667)
+(DOI [10.5281/zenodo.21626667](https://doi.org/10.5281/zenodo.21626667)) for the
+frozen snapshot.

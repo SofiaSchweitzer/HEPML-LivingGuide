@@ -1,0 +1,6 @@
+# Site-wide defaults for the section registry.
+
+# A section older than this gets an automatic staleness notice on its page.
+# A stale bibliography is merely incomplete; a stale guide is misleading, so
+# aging is made visible rather than left to be noticed.
+default_review_interval_months: 12

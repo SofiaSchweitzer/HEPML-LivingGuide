@@ -1,60 +1,61 @@
 # Anomaly detection
 
-!!! abstract "Section status"
-    **Contributor:** *Your name here — be the first to contribute this section.*
-    **Last updated:** *—*
-    **Status:** Stub. Below is the template each section should follow. See
-    [Contribute](../contribute.md) for how to claim and write a section.
-
 ## Overview
 
-*One to two paragraphs.* Describe the problem the section covers and why it
-matters in the HEP context. Place it relative to adjacent areas — for anomaly
-detection, that might mean clarifying the relationship to traditional
-bump-hunting, the role of model-agnostic searches at the LHC, and the
-distinction between weakly-supervised and fully unsupervised approaches.
+Anomaly detection asks whether collider data contains something the Standard Model
+does not predict, without specifying in advance what that something is. It responds to
+a structural tension in the search program: a dedicated search is far more sensitive
+to the signal it was designed for, but the space of possible signals is vastly larger
+than the number of searches anyone can perform.
+
+The literature divides by how much supervision is available, and that distinction
+matters more than the choice of architecture. *Unsupervised* methods flag events
+improbable under a learned model of the data. *Weakly supervised* methods exploit the
+expectation that a signal is localized in some variable, so a classifier separating a
+signal region from sidebands approximates the optimal discriminant without ever seeing
+a labeled signal. The latter has proven substantially more powerful.
+
+A point easily missed on a first pass: the hard part is usually not the anomaly score
+but the background estimate, since a selection made with a learned score distorts the
+background in ways that must be controlled before any significance can be quoted.
 
 ## Recommended starting points
 
-*Three to six entries.* Each is a review, tutorial, or lecture note, with a
-one-sentence annotation explaining what it covers and for whom.
-
-- **Title of review** ([arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX)) —
-  *one sentence on what this is and who it serves.*
-- **Tutorial or lecture notes** ([link](https://example.org)) —
-  *one sentence.*
+- **Machine Learning for Anomaly Detection in Particle Physics**, Belis et al. (2023) ([arXiv:2312.14190](https://arxiv.org/abs/2312.14190)) — *the standard review of the area; read this first*
+- **Anomaly Detection for Physics Analysis and Less than Supervised Learning**, Nachman (2020) ([arXiv:2010.14554](https://arxiv.org/abs/2010.14554)) — *shorter and more conceptual, on the supervision spectrum and why weak supervision helps*
+- **The LHC Olympics 2020: A Community Challenge for Anomaly Detection in High Energy Physics**, Kasieczka et al. (2021) ([arXiv:2101.08320](https://arxiv.org/abs/2101.08320)) — *the LHC Olympics summary, doubling as an empirical survey of what many methods achieve on common data*
 
 ## Curated paper list
 
-*Foundational and representative papers, grouped thematically. Not exhaustive
-by design.*
+!!! note "This list is a seed, not a curated selection"
+    A few landmark papers are listed to give the section a starting shape.
+    A proper curated list — thematically grouped, with an annotation on every
+    entry — is what this section still needs. See [Contribute](../contribute.md).
 
-### Foundational approaches
-
-- **Paper title**, Author et al. ([arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX)) —
-  *brief annotation: what it established and why it's in the list.*
-
-### Density estimation methods
-
-- **Paper title**, Author et al. ([arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX)) —
-  *brief annotation.*
-
-### Weakly-supervised approaches
-
-- **Paper title**, Author et al. ([arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX)) —
-  *brief annotation.*
+- **Anomaly Detection for Resonant New Physics with Machine Learning**, Collins et al. (2018) ([arXiv:1805.02664](https://arxiv.org/abs/1805.02664)) — *CWoLa hunting: introduced the weakly supervised, sideband-based framing most later work builds on*
+- **Searching for New Physics with Deep Autoencoders**, Farina et al. (2018) ([arXiv:1808.08992](https://arxiv.org/abs/1808.08992)) — *autoencoder reconstruction error as an anomaly score — the canonical unsupervised baseline*
+- **Anomaly Detection with Density Estimation**, Nachman et al. (2020) ([arXiv:2001.04990](https://arxiv.org/abs/2001.04990)) — *ANODE: densities estimated in signal region and sidebands separately, making the background estimate intrinsic to the method*
+- **Classifying Anomalies THrough Outer Density Estimation (CATHODE)**, Hallin et al. (2021) ([arXiv:2109.00546](https://arxiv.org/abs/2109.00546)) — *CATHODE: sampling from the sideband-interpolated density to train a classifier, now a standard baseline*
 
 ## Benchmarks, datasets & software
 
-- **LHC Olympics 2020** ([arXiv:2101.08320](https://arxiv.org/abs/2101.08320)) —
-  community challenge dataset for anomaly detection, with leaderboards and a
-  summary paper.
-- **Dark Machines Anomaly Score Challenge** ([arXiv:2105.14027](https://arxiv.org/abs/2105.14027)) —
-  benchmark for model-independent event classification.
+- **The LHC Olympics 2020: A Community Challenge for Anomaly Detection in High Energy Physics**, Kasieczka et al. (2021) ([arXiv:2101.08320](https://arxiv.org/abs/2101.08320)) — *LHC Olympics 2020 R&D and black-box datasets, with a leaderboard*
+- **The Dark Machines Anomaly Score Challenge: Benchmark Data and Model Independent Event Classification for the Large Hadron Collider**, Aarrestad et al. (2021) ([arXiv:2105.14027](https://arxiv.org/abs/2105.14027)) — *Dark Machines anomaly score challenge — complementary in signals and event representation*
+
+## Open questions
+
+*What is settled here, what is contested, and what remains unsolved? This is
+the part a bibliography structurally cannot provide, and often the most
+useful paragraph on the page.*
+
+## Further reading
+
+*Relevant work that is not an entry point — too specialized, too recent, or simply not where a newcomer should start. Suggestions that do not fit the curated list above belong here rather than being turned away.*
+
+*Nothing listed yet.*
 
 ## Cross-references
 
-- For generative models used as density estimators in anomaly detection, see
-  [Generative models](../methods/generative.md).
-- For uncertainty quantification on anomaly scores, see
-  [Uncertainty quantification & calibration](../methods/uncertainty.md).
+- Density estimators and flows are covered under [Generative models](../methods/generative.md).
+- Real-time and trigger-level operation is under [Triggering](triggering.md).
+- Significance and systematics are under [Uncertainty quantification](../methods/uncertainty.md).

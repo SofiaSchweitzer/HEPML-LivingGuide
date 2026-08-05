@@ -1,21 +1,28 @@
 # Related living resources
 
 The HEP–ML Living Guide is one of several community-curated resources that have
-emerged in neighbouring areas, all built on the principle that orientation in a
-fast-moving field deserves its own dedicated infrastructure. Listed here for
-discoverability.
+emerged in neighboring areas, all built on the principle that orientation in a
+fast-moving field deserves its own dedicated infrastructure.
 
-## Machine learning in adjacent fields
+Their existence is what lets this Guide keep a
+[narrow scope](../about.md). The areas below are deliberately **not** covered
+here — they are covered better by the people who work in them.
+
+## Outside our scope — go here instead
 
 - **Machine Learning in Cosmology**, George Stein —
-  <https://github.com/georgestein/ml-in-cosmology>
+  <https://github.com/georgestein/ml-in-cosmology> — cosmology and large-scale
+  structure.
 - **Awesome Astrodata**, Michael Gully-Santiago —
-  <https://github.com/gully/awesome-astrodata>
+  <https://github.com/gully/awesome-astrodata> — astronomical data science.
+- **The AI/ML for Particle Accelerators Living Review** —
+  <https://ml-accel-review.org> — accelerator design, operation, and controls.
 
-## Neighbouring HEP resources
+## Neighboring HEP resources
 
 - **Awesome HEP**, IRIS-HEP —
-  <https://github.com/iris-hep/awesome-hep> — software-focused field guide to HEP.
+  <https://github.com/iris-hep/awesome-hep> — software-focused field guide to
+  HEP, complementary to this one.
 
 ## Method-specific resources
 
@@ -25,15 +32,10 @@ discoverability.
 - **Awesome Neural SBI**, Siddharth Mishra-Sharma —
   <https://github.com/smsharma/awesome-neural-sbi>
 
-## Closely related living reviews
-
-- **The AI/ML for Particle Accelerators Living Review** —
-  <https://ml-accel-review.org> — sister resource focused on accelerator
-  applications.
-
 ## The predecessor
 
 - **The HEP–ML Living Review** (archived) —
-  <https://iml-wg.github.io/HEPML-LivingReview/> — the bibliographic record of
-  HEP–ML literature through 2026. See [The archived Living Review](../archived-review.md)
+  <https://iml-wg.github.io/HEPML-LivingReview/>, archived at
+  [Zenodo](https://zenodo.org/records/21626667) — the bibliographic record of
+  HEP–ML literature until 1 June 2026. See [The archived Living Review](../archived-review.md)
   for context.

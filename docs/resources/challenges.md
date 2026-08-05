@@ -1,6 +1,6 @@
 # Community challenges
 
-Major community-organised challenges in HEP–ML, with links to their summary
+Major community-organized challenges in HEP–ML, with links to their summary
 papers. These are valuable not only as benchmarks but also as snapshots of the
 state of the art at a given moment.
 

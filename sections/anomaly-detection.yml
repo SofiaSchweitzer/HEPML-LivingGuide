@@ -1,0 +1,33 @@
+# ---------------------------------------------------------------------------
+# Section registry entry.
+#
+# This file holds the section's metadata: who wrote it and when it was last
+# reviewed. The status banner and the staleness notice on the rendered page are
+# generated from this file by hooks/section_status.py -- do not hand-write them
+# into the Markdown. A "last updated" line a contributor has to remember to edit
+# is a line that goes stale silently.
+# ---------------------------------------------------------------------------
+
+id: anomaly-detection
+title: "Anomaly detection"
+axis: application
+page: docs/applications/anomaly-detection.md
+
+# stub | draft | published
+status: stub
+
+# Named authors of the current version. An empty list renders as "unclaimed".
+authors: []
+#  - name: Jane Doe
+#    affiliation: Example University
+#    orcid: 0000-0000-0000-0000
+
+# GitHub handles of people willing to be contacted when the section falls due
+# for review. Stewardship is transferable and can be handed back at any time.
+stewards: []
+
+# ISO date of the last substantive review. `null` means never written.
+last_reviewed: null
+
+# Months before the staleness notice appears. Overrides the site default of 12.
+review_interval_months: null

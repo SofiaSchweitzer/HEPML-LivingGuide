@@ -3,7 +3,8 @@
 [![Deploy site](https://github.com/iml-wg/HEPML-LivingGuide/actions/workflows/deploy.yml/badge.svg)](https://github.com/iml-wg/HEPML-LivingGuide/actions/workflows/deploy.yml)
 [![Site](https://img.shields.io/website?url=https%3A%2F%2Fiml-wg.github.io%2FHEPML-LivingGuide%2F&label=site)](https://iml-wg.github.io/HEPML-LivingGuide/)
 
-A community-curated field guide to machine learning for particle physics.
+A community-curated field guide to machine learning for **particle physics**,
+maintained by the HEP–ML community.
 
 **Live site:** <https://iml-wg.github.io/HEPML-LivingGuide/>
 
@@ -14,32 +15,6 @@ recommendations of foundational works, and community-driven guidance for
 researchers navigating a now mature and rapidly diversifying field. See the
 [About](https://iml-wg.github.io/HEPML-LivingGuide/about/) page for the full
 rationale.
-
-## Repository layout
-
-```
-.
-├── docs/                       # Site content
-│   ├── index.md                # Landing page
-│   ├── how-to-use.md           # Editorial principles
-│   ├── applications/           # Sections organised by HEP application
-│   ├── methods/                # Sections organised by ML method
-│   ├── resources/              # Reviews, benchmarks, related resources
-│   ├── about.md                # About the Guide
-│   ├── archived-review.md      # Pointers to the archived Living Review
-│   ├── contribute.md           # How to contribute
-│   ├── code-of-conduct.md
-│   ├── cite.md
-│   ├── assets/                 # Logo, favicon, images
-│   ├── javascripts/            # MathJax config
-│   └── stylesheets/            # Custom CSS
-├── mkdocs.yml                  # MkDocs configuration
-├── requirements.txt            # Python dependencies for building the site
-├── .github/workflows/deploy.yml  # CI: build + deploy to GitHub Pages
-├── CONTRIBUTING.md             # Short contribution guide (full version on the site)
-├── LICENSE                     # CC BY 4.0 for content; MIT for code
-└── README.md                   # This file
-```
 
 ## Local preview
 

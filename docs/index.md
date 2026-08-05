@@ -1,5 +1,5 @@
 <div class="hg-hero" markdown>
-<span class="hg-eyebrow">IML Working Group</span>
+<span class="hg-eyebrow">HEP–ML Community</span>
 
 # HEP–ML Living Guide
 
@@ -12,7 +12,7 @@ a fast-moving literature.
 
 !!! info "This resource replaces the HEP–ML Living Review"
     The original [Living Review of Machine Learning for Particle Physics](https://iml-wg.github.io/HEPML-LivingReview/)
-    is frozen as an archival reference covering the literature through June 2026.
+    is frozen as an archival reference covering the literature until 1 June 2026.
     The **Living Guide** is its successor: a curated, annotated entry point into a
     now mature and diversifying field. Read more on the [About](about.md) page.
 
@@ -20,7 +20,8 @@ a fast-moving literature.
 
 Machine learning in particle physics has grown to over 4 000 papers and several
 hundred new ones each year. A comprehensive list is no longer the most useful
-resource a researcher needs. This guide answers a different question:
+resource a researcher needs — INSPIRE-HEP and arXiv already do that job well.
+This guide answers a different question:
 
 > *Where should I start, what matters, and why?*
 
@@ -56,7 +57,7 @@ how you're thinking about a problem.
 - [How to use this guide](how-to-use.md) — what each section contains, and what it deliberately leaves out
 - [Reviews & lecture notes](resources/reviews-lectures.md) — the best places to read more deeply
 - [Benchmarks & community challenges](resources/challenges.md) — shared datasets and competitions
-- [Related living resources](resources/related.md) — sister guides in cosmology, astronomy, and HEP software
+- [Related living resources](resources/related.md) — guides covering adjacent fields that this one deliberately leaves out
 - [Contribute](contribute.md) — write a section, suggest a paper, flag an error
 
 ## Citing the Guide

@@ -21,7 +21,7 @@ nav:
       - Triggering: applications/triggering.md
       - Reconstruction: applications/reconstruction.md
       - Simulation & fast emulation: applications/simulation.md
-      - Unfolding & inference: applications/unfolding-inference.md
+      - Unfolding & simulation-based inference: applications/unfolding-inference.md
       - Anomaly detection: applications/anomaly-detection.md
       - Phenomenology: applications/phenomenology.md
       - Formal theory: applications/formal-theory.md
@@ -30,10 +30,11 @@ nav:
       - Overview: methods/index.md
       - Equivariant & geometric architectures: methods/equivariant-geometric.md
       - Generative models: methods/generative.md
-      - Simulation-based inference: methods/sbi.md
+      - Density estimation & likelihood ratios: methods/density-ratio.md
       - Uncertainty quantification & calibration: methods/uncertainty.md
       - Differentiable programming: methods/differentiable.md
       - Foundation models: methods/foundation-models.md
+      - LLMs & agents: methods/agents.md
   - Resources:
       - Reviews & lecture notes: resources/reviews-lectures.md
       - Benchmarks & datasets: resources/benchmarks.md
@@ -47,12 +48,24 @@ nav:
       - Cite us: cite.md
 
 # ----------------------------------------------------------------------
+# Hooks
+#
+# section_status.py renders the status banner, the staleness notice and the
+# per-section citation block from sections/*.yml. These are never hand-written
+# into the Markdown: a "last updated" line a contributor has to remember to edit
+# is a line that goes stale silently.
+# ----------------------------------------------------------------------
+hooks:
+  - hooks/section_status.py
+
+# ----------------------------------------------------------------------
 # Theme
 # ----------------------------------------------------------------------
 theme:
   name: material
+  custom_dir: overrides
   language: en
-  logo: assets/logo.svg
+  logo: assets/logo-light.png
   favicon: assets/favicon.svg
   features:
     - navigation.tabs
@@ -128,6 +141,5 @@ extra:
   generator: false
 
 copyright: >
-  The HEP–ML Living Guide is a community-maintained resource by the
-  <a href="https://iml-wg.web.cern.ch/">IML Working Group</a>.
+  The HEP–ML Living Guide is maintained by the HEP–ML community.
   Content is licensed CC BY 4.0.
