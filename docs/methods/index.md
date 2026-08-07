@@ -6,8 +6,8 @@ instead.
 
 ## Sections
 
-- [Equivariant & geometric architectures](equivariant-geometric.md) — symmetry-preserving networks for jets, particles, and detector geometry
-- [Generative models](generative.md) — normalising flows, diffusion models, VAEs, GANs in HEP
+- [Equivariant & geometric architectures](equivariant-geometric.md) — symmetry-respecting networks for jets, particles, and detector geometry
+- [Generative models](generative.md) — normalizing flows, diffusion models, VAEs, GANs in HEP
 - [Density estimation & likelihood ratios](density-ratio.md) — classifiers as likelihood ratios, reweighting, normalizing flows and diffusion as density estimators
 - [Uncertainty quantification & calibration](uncertainty.md) — calibrated predictions, conformal methods, Bayesian deep learning
 - [Differentiable programming](differentiable.md) — end-to-end optimization through simulators and analysis pipelines
