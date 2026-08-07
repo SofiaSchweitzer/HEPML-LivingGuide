@@ -13,7 +13,6 @@ where is genuinely open rather than rhetorical.
 
 ## Recommended starting points
 
-- **Toward a Community Roadmap for High Energy Physics and Artificial Intelligence in China and Beyond**, Cai et al. (2026) ([arXiv:2605.03474](https://arxiv.org/abs/2605.03474)) — *a community roadmap for HEP and artificial intelligence*
 - **Building an AI-native Research Ecosystem for Experimental Particle Physics: A Community Vision**, Aarrestad et al. (2026) ([arXiv:2602.17582](https://arxiv.org/abs/2602.17582)) — *on building an AI-native research ecosystem for experimental particle physics*
 - **Les Houches guide to reusable ML models in LHC analyses**, Araz et al. (2023) ([arXiv:2312.14575](https://arxiv.org/abs/2312.14575)) — *the Les Houches guide to reusable models, the practical prerequisite for any of this*
 
