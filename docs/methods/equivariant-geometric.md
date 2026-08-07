@@ -12,9 +12,9 @@ and graphs, then to explicit symmetry constraints.
 
 ## Recommended starting points
 
+- **The Machine Learning Landscape of Top Taggers**, Butter et al. (2019) ([arXiv:1902.09914](https://arxiv.org/abs/1902.09914)) — *the top-tagging comparison, the cleanest empirical read on what structure actually buys*
 - **Symmetry Group Equivariant Architectures for Physics**, Bogatskiy et al. (2022) ([arXiv:2203.06153](https://arxiv.org/abs/2203.06153)) — *symmetry group equivariant architectures for physics, the dedicated review*
 - **Graph Neural Networks in Particle Physics: Implementations, Innovations, and Challenges**, Thais et al. (2022) ([arXiv:2203.12852](https://arxiv.org/abs/2203.12852)) — *graph neural networks in particle physics, on implementations and innovations*
-- **The Machine Learning Landscape of Top Taggers**, Butter et al. (2019) ([arXiv:1902.09914](https://arxiv.org/abs/1902.09914)) — *the top-tagging comparison, the cleanest empirical read on what structure actually buys*
 
 ## Curated paper list
 
@@ -29,6 +29,7 @@ and graphs, then to explicit symmetry constraints.
 - **An Efficient Lorentz Equivariant Graph Neural Network for Jet Tagging**, Gong et al. (2022) ([arXiv:2201.08187](https://arxiv.org/abs/2201.08187)) — *LorentzNet: the paper that showed Lorentz equivariance could be made cheap enough to compete on speed as well as accuracy, which is what moved the idea out of proof-of-concept*
 - **PELICAN: Permutation Equivariant and Lorentz Invariant or Covariant Aggregator Network for Particle Physics**, Bogatskiy et al. (2022) ([arXiv:2211.00454](https://arxiv.org/abs/2211.00454)) — *permutation and Lorentz symmetry imposed together, on pairwise invariants rather than on the four-vectors themselves. Competitive with far larger models, which is the cleanest evidence that symmetry substitutes for parameters*
 - **Lorentz-Equivariant Geometric Algebra Transformers for High-Energy Physics**, Spinner et al. (2024) ([arXiv:2405.14806](https://arxiv.org/abs/2405.14806)) — *L-GATr: geometric algebra as the representation, which makes Lorentz equivariance a property of the data type rather than a constraint bolted onto the architecture, and scales to transformer size*
+- **Lorentz Local Canonicalization: How to Make Any Network Lorentz-Equivariant**, Spinner et al. (2025) ([arXiv:2505.20280](https://arxiv.org/abs/2505.20280)) — *LLoCa, a general framework that renders any backbone network exactly Lorentz-equivariant*
 
 ## Benchmarks, datasets & software
 
