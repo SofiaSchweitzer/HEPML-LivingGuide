@@ -14,7 +14,7 @@ instead.
 - [Unfolding & simulation-based inference](unfolding-inference.md) — detector unfolding, parameter estimation, limit setting from simulators without a tractable likelihood
 - [Anomaly detection](anomaly-detection.md) — model-agnostic searches for new physics
 - [Phenomenology](phenomenology.md) — parton distributions, global fits, BSM scans, reinterpretation, symbolic methods
-- [Formal theory](formal-theory.md) — ML for formal theoretical problems, including string theory and lattice gauge theory
+- [Formal theory](formal-theory.md) — ML for formal theoretical problems, like for example string theory
 - [Lattice QCD](lattice.md) — ML for lattice configurations, observables, and flow-based sampling
 
 !!! note "Some sections may be empty for now"
