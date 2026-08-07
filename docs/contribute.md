@@ -41,7 +41,7 @@ the section.
    scope.
 2. **Use the standard structure.** Every section contains: Overview,
    Recommended starting points, Curated paper list, Benchmarks/datasets/software,
-   and Cross-references. See [Anomaly detection](applications/anomaly-detection.md)
+   and Cross-references. See [Simulation](applications/simulation.md)
    for a worked template.
 3. **Submit a pull request.** Include your name, affiliation, and a date stamp.
 4. **Get credited.** Authors of section-level contributions are listed by name on
