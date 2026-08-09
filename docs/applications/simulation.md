@@ -30,10 +30,10 @@ adopted in production versus what remains a demonstration.
 
 ## Recommended starting points
 
-- **Machine Learning and LHC Event Generation**, Badger et al. (2022) ([arXiv:2203.07460](https://arxiv.org/abs/2203.07460)) — *the Snowmass report on ML for LHC event generation; the best entry point for the generation half of the chain*
-- **CaloChallenge 2022: A Community Challenge for Fast Calorimeter Simulation**, Krause et al. (2024) ([arXiv:2410.21611](https://arxiv.org/abs/2410.21611)) — *the CaloChallenge: a controlled comparison of detector surrogates on shared data with agreed metrics*
 - **A survey of machine learning-based physics event generation**, Alanazi et al. (2021) ([arXiv:2106.00643](https://arxiv.org/abs/2106.00643)) — *a survey of ML-based physics event generation, complementary in emphasis to the Snowmass report*
+- **Machine Learning and LHC Event Generation**, Badger et al. (2022) ([arXiv:2203.07460](https://arxiv.org/abs/2203.07460)) — *the Snowmass report on ML for LHC event generation; the best entry point for the generation half of the chain*
 - **Deep Generative Models for Detector Signature Simulation: An Analytical Taxonomy**, Hashemi et al. (2023) ([arXiv:2312.09597](https://arxiv.org/abs/2312.09597)) — *an analytical taxonomy of generative models for detector signatures, useful for organizing the architecture zoo*
+- **CaloChallenge 2022: A Community Challenge for Fast Calorimeter Simulation**, Krause et al. (2024) ([arXiv:2410.21611](https://arxiv.org/abs/2410.21611)) — *the CaloChallenge: a controlled comparison of detector surrogates on shared data with agreed metrics*
 
 ## Curated paper list
 
@@ -51,15 +51,15 @@ adopted in production versus what remains a demonstration.
 
 - **Efficient Monte Carlo Integration Using Boosted Decision Trees and Generative Deep Neural Networks**, Bendavid (2017) ([arXiv:1707.00028](https://arxiv.org/abs/1707.00028)) — *the pre-neural baseline using boosted decision trees, useful for seeing what the learned methods actually improved on*
 - **Neural Network-Based Approach to Phase Space Integration**, Klimek et al. (2018) ([arXiv:1810.11509](https://arxiv.org/abs/1810.11509)) — *the first neural approach to phase-space integration, framing the problem as learning a change of variables*
-- **i-flow: High-Dimensional Integration and Sampling with Normalizing Flows**, Gao et al. (2020) ([arXiv:2001.05486](https://arxiv.org/abs/2001.05486)) — *i-flow: normalizing flows for high-dimensional integration and sampling*
-- **Exploring phase space with Neural Importance Sampling**, Bothmann et al. (2020) ([arXiv:2001.05478](https://arxiv.org/abs/2001.05478)) — *neural importance sampling for phase space, arrived at independently and worth reading alongside i-flow*
+- **Exploring phase space with Neural Importance Sampling**, Bothmann et al. (2020) ([arXiv:2001.05478](https://arxiv.org/abs/2001.05478)) — *neural importance sampling for phase space*
+- **Event Generation with Normalizing Flows**, Gao et al. (2020) ([arXiv:2001.10028](https://arxiv.org/abs/2001.10028)) — *neural importance sampling for phase space, independentfrom, but simultaneously to Bothmann et al.*
 - **MadNIS -- Neural Multi-Channel Importance Sampling**, Heimel et al. (2022) ([arXiv:2212.06172](https://arxiv.org/abs/2212.06172)) — *MadNIS: multi-channel importance sampling combining learned maps with the channel decomposition generators already use*
 
 ### Event generation and unweighting
 
+- **Deep Learning as a Parton Shower**, Monk (2018) ([arXiv:1807.03685](https://arxiv.org/abs/1807.03685)) — *a parton shower expressed as a learned model, connecting generation to the structure of QCD emission*
 - **DijetGAN: A Generative-Adversarial Network Approach for the Simulation of QCD Dijet Events at the LHC**, Di Sipio et al. (2019) ([arXiv:1903.02433](https://arxiv.org/abs/1903.02433)) — *one of the first attempts to generate full events rather than detector images, and a useful marker of where the field started on this problem*
 - **How to GAN Event Unweighting**, Backes et al. (2020) ([arXiv:2012.07873](https://arxiv.org/abs/2012.07873)) — *unweighting with generative models, one of the clearest cases where a surrogate accelerates an exact procedure rather than replacing it*
-- **Deep Learning as a Parton Shower**, Monk (2018) ([arXiv:1807.03685](https://arxiv.org/abs/1807.03685)) — *a parton shower expressed as a learned model, connecting generation to the structure of QCD emission*
 - **Learning to Simulate High Energy Particle Collisions from Unlabeled Data**, Howard et al. (2021) ([arXiv:2101.08944](https://arxiv.org/abs/2101.08944)) — *OTUS: an optimal-transport approach that learns the latent-to-observed map from unlabeled data, so the simulator is trained against real events rather than against another simulator*
 - **Unweighting multijet event generation using factorisation-aware neural networks**, Janssen et al. (2023) ([arXiv:2301.13562](https://arxiv.org/abs/2301.13562)) — *factorisation-aware unweighting for multijet generation, bringing physics structure to the same problem*
 
@@ -67,22 +67,24 @@ adopted in production versus what remains a demonstration.
 
 - **Learning Particle Physics by Example: Location-Aware Generative Adversarial Networks for Physics Synthesis**, de Oliveira et al. (2017) ([arXiv:1701.05927](https://arxiv.org/abs/1701.05927)) — *LAGAN: the first location-aware generative model for calorimeter images, and the paper that opened the area*
 - **CaloGAN : Simulating 3D high energy particle showers in multilayer electromagnetic calorimeters with generative adversarial networks**, Paganini et al. (2018) ([arXiv:1712.10321](https://arxiv.org/abs/1712.10321)) — *CaloGAN: three-dimensional multi-layer showers, setting the problem template still in use*
-- **CaloFlow: Fast and Accurate Generation of Calorimeter Showers with Normalizing Flows**, Krause et al. (2021) ([arXiv:2106.05285](https://arxiv.org/abs/2106.05285)) — *CaloFlow: tractable likelihoods for shower generation, which is what made quality assessment quantitative rather than visual*
-- **Score-based Generative Models for Calorimeter Shower Simulation**, Mikuni et al. (2022) ([arXiv:2206.11898](https://arxiv.org/abs/2206.11898)) — *score-based diffusion for showers, now the dominant approach*
+- **CaloFlow: Fast and Accurate Generation of Calorimeter Showers with Normalizing Flows**, Krause et al. (2021) ([arXiv:2106.05285](https://arxiv.org/abs/2106.05285)) — *CaloFlow: tractable likelihoods for shower generation, first application of normalizing flows to detector simulation, good quality based on new classifier test*
+- **Score-based Generative Models for Calorimeter Shower Simulation**, Mikuni et al. (2022) ([arXiv:2206.11898](https://arxiv.org/abs/2206.11898)) — *score-based diffusion for showers*
+- **CaloDREAM – Detector response emulation via attentive flow matching**, Favaro et al. (2024) ([arXiv:2405.09629](https://arxiv.org/abs/2405.09629))— *conditional flow matching with transformer elements. *
 
 ### Evaluation and validation
 
-- **Evaluating generative models in high energy physics**, Kansal et al. (2023) ([arXiv:2211.10295](https://arxiv.org/abs/2211.10295)) — *on evaluating generative models in high energy physics — the metrics question posed directly*
-- **Generative Models and Statistical Validation**, Diefenbacher et al. (2026) ([arXiv:2605.30453](https://arxiv.org/abs/2605.30453)) — *statistical validation of generative models, an area the field arrived at late*
-- **A First Full Physics Benchmark for Highly Granular Calorimeter Surrogates**, Buss et al. (2025) ([arXiv:2511.17293](https://arxiv.org/abs/2511.17293)) — *a full physics benchmark for calorimeter surrogates, measuring downstream impact rather than distributional agreement*
 - **Understanding Event-Generation Networks via Uncertainties**, Bellagente et al. (2021) ([arXiv:2104.04543](https://arxiv.org/abs/2104.04543)) — *understanding event-generation networks through their uncertainties, an early attempt to make a surrogate say when it does not know*
+- **Evaluating generative models in high energy physics**, Kansal et al. (2023) ([arXiv:2211.10295](https://arxiv.org/abs/2211.10295)) — *on evaluating generative models in high energy physics — the metrics question posed directly*
+- **How to Understand Limitations of Generative Networks**, Das et al. (2023) ([arXiv:2305.16774](https://arxiv.org/abs/2305.16774)) — *on the limitations of generative networks — what they can and cannot be expected to reproduce*
+- **A First Full Physics Benchmark for Highly Granular Calorimeter Surrogates**, Buss et al. (2025) ([arXiv:2511.17293](https://arxiv.org/abs/2511.17293)) — *a full physics benchmark for calorimeter surrogates, measuring downstream impact rather than distributional agreement*
+- **Generative Models and Statistical Validation**, Diefenbacher et al. (2026) ([arXiv:2605.30453](https://arxiv.org/abs/2605.30453)) — *statistical validation of generative models, an area the field arrived at late*
 
 ## Benchmarks, datasets & software
 
 - **CaloChallenge 2022: A Community Challenge for Fast Calorimeter Simulation**, Krause et al. (2024) ([arXiv:2410.21611](https://arxiv.org/abs/2410.21611)) — *CaloChallenge 2022 datasets at three detector granularities, with agreed metrics*
+- **LEMURS dataset: Large-scale multi-detector ElectroMagnetic Universal Representation of Showers**, McKeown et al. (2025) ([arXiv:2509.05108](https://arxiv.org/abs/2509.05108)) — *LEMURS: large-scale multi-detector electromagnetic shower data*
 - **step2point dataset: Detailed shower simulation for data representation studies**, Zaborowska et al. (2025) ([arXiv:2509.22340](https://arxiv.org/abs/2509.22340)) — *step2point: detailed shower simulation for data-representation studies*
 - **ColliderML: The First Release of an OpenDataDetector High-Luminosity Physics Benchmark Dataset**, Elitez et al. (2025) ([arXiv:2512.15230](https://arxiv.org/abs/2512.15230)) — *ColliderML: an OpenDataDetector dataset at HL-LHC scale*
-- **LEMURS dataset: Large-scale multi-detector ElectroMagnetic Universal Representation of Showers**, McKeown et al. (2025) ([arXiv:2509.05108](https://arxiv.org/abs/2509.05108)) — *LEMURS: large-scale multi-detector electromagnetic shower data*
 
 ## Open questions
 

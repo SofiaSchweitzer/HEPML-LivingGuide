@@ -13,6 +13,7 @@ the one where a good section would add the most.
 ## Recommended starting points
 
 - **New directions for surrogate models and differentiable programming for High Energy Physics detector simulation**, Adelmann et al. (2022) ([arXiv:2203.08806](https://arxiv.org/abs/2203.08806)) — *the Snowmass contribution on surrogate models and differentiable programming for HEP*
+- **Toward the end-to-end optimization of particle physics instruments with differentiable programming**, Dorigo et al. (2022) ([arXiv:2203.13818](https://arxiv.org/abs/2203.13818)) — *white paper on the use of differential programming for detector optimization*
 
 ## Curated paper list
 
