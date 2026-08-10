@@ -17,10 +17,19 @@ page: docs/applications/reconstruction.md
 status: stub
 
 # Named authors of the current version. An empty list renders as "unclaimed".
+#
+# `orcid`   full iD, 0000-0000-0000-0000 (the check digit is verified at build time)
+# `inspire` INSPIRE-HEP author record id, i.e. the number in the profile URL
+#           https://inspirehep.net/authors/1234567 -- the legacy BAI form
+#           (J.R.Thaler.1) is accepted too. Find yours by searching your name on
+#           INSPIRE and opening your author page.
+#
+# Both are optional and independent: give one, both, or neither. Affiliations are
+# deliberately not shown, because they date faster than the sections do.
 authors: []
 #  - name: Jane Doe
-#    affiliation: Example University
 #    orcid: 0000-0000-0000-0000
+#    inspire: 1234567
 
 # GitHub handles of people willing to be contacted when the section falls due
 # for review. Stewardship is transferable and can be handed back at any time.

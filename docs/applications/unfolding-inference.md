@@ -22,7 +22,7 @@ likelihood ratio of the latent process can be extracted and used as training tar
 allow. That is why methods developed here are of interest well outside the field.
 
 Not all inference in HEP is simulation-based. Weakly supervised searches infer a signal
-from data alone, without trusting a simulation to model the background; that work lives
+from data alone, without trusting a simulation to model the background, which lives
 under [Anomaly detection](anomaly-detection.md).
 
 ## Recommended starting points

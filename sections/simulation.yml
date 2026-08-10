@@ -17,13 +17,15 @@ page: docs/applications/simulation.md
 status: published
 
 # Named authors of the current version. An empty list renders as "unclaimed".
+# `orcid` and `inspire` are optional and independent; each renders as an icon
+# link after the name.
 authors:
   - name: Claudius Krause
-    affiliation: Marietta Blau Institute for Particle Physics, Austrian Academy of Sciences
     orcid: 0000-0003-0924-3036
+    inspire: 1256558
   - name: Ramon Winterhalder
-    affiliation: Università degli Studi di Milano & INFN Sezione di Milano
     orcid: 0000-0002-9902-578X
+    inspire: 1794691
 
 # GitHub handles of people willing to be contacted when the section falls due
 # for review. Stewardship is transferable and can be handed back at any time.
@@ -32,7 +34,7 @@ stewards: []
 #  - ramonwinterhalder   #       review notice can actually reach you
 
 # ISO date of the last substantive review. `null` means never written.
-last_reviewed: 2026-08-05
+last_reviewed: 2026-08-10
 
 # Months before the staleness notice appears. Overrides the site default of 12.
 review_interval_months: null

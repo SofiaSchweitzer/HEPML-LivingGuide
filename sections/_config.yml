@@ -4,3 +4,44 @@
 # A stale bibliography is merely incomplete; a stale guide is misleading, so
 # aging is made visible rather than left to be noticed.
 default_review_interval_months: 12
+
+# ---------------------------------------------------------------------------
+# Section status banner
+#
+# Wording and delimiters for the banner that hooks/section_status.py renders at
+# the top of every section page. Everything here is optional: delete a key and
+# the built-in default applies, so a partial block is fine.
+#
+# Spacing is not configured here. Gaps, icon size and vertical rhythm are CSS,
+# and live as --hg-status-* / --hg-idlink-* custom properties near the top of
+# docs/stylesheets/extra.css.
+#
+# Quote any separator with leading or trailing spaces, or YAML will strip them.
+# ---------------------------------------------------------------------------
+status_banner:
+  type: abstract               # any Material admonition type: note, info, tip, ...
+  title: Section status
+
+  labels:
+    contributor: Contributor   # used when the section has exactly one author
+    contributors: Contributors # used when it has more than one
+    last_reviewed: Last reviewed
+    status: Status
+
+  separators:
+    label: ":"                 # between a field label and its value
+    authors: ", "              # between one author and the next
+                               # a middot reads as another badge next to the
+                               # icons; a comma sits lower and stays punctuation
+    name_ids: ""               # between a name and its first identifier icon
+    ids: ""                    # between two icons belonging to the same author
+                               # both empty on purpose: the gap is CSS
+                               # (--hg-idlink-gap / -gap-inner). A literal space
+                               # here would stack on top of the margin, and it
+                               # would also let a line break orphan an icon onto
+                               # the next line away from its name.
+    no_date: "—"               # stands in for a missing last_reviewed
+
+  stale:
+    type: warning
+    title: This section may be out of date

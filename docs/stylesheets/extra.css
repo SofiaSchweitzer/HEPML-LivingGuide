@@ -44,6 +44,31 @@
   --hg-border-strong:              #d6d3d1;
   --hg-text-muted:                 #57534e;
   --hg-text-faint:                 #78716c;
+
+  /* ---- Section status banner: all spacing in one place ----
+     Wording and delimiters are in sections/_config.yml (status_banner:).
+     These are the geometry knobs; change them here and every section page
+     follows, in both color schemes. */
+  --hg-status-row-gap:             0.42rem;  /* between the banner's rows */
+  --hg-status-pad-bottom:          0.1rem;   /* below the last row */
+  /* Zero on purpose: Markdown already emits a space after the bold label, so
+     any margin here stacks on top of it. */
+  --hg-status-label-gap:           0;
+  --hg-idlink-size:                0.88em;   /* icon glyph size */
+  /* These are margins, and the hover chip's padding sits inside them, so the
+     optical gap is gap + pad on the name side but pad + gap + pad between two
+     icons. gap-inner is therefore 0: the two paddings alone already separate
+     adjacent icons by more than the name-side gap would otherwise be. */
+  --hg-idlink-gap:                 0.20em;   /* name to its first icon */
+  --hg-idlink-gap-inner:           0;        /* icon to icon */
+  --hg-idlink-pad:                 0.1em;    /* hover chip padding */
+  /* Centres the glyph on the capitals rather than below them. The names start
+     with capitals, so aligning to x-height makes the icons look like they are
+     sinking. */
+  --hg-idlink-shift:              -0.08em;
+  /* Faint, not muted: a solid filled shape at body-text weight competes with
+     the name it is annotating. */
+  --hg-idlink-color:               var(--hg-text-faint);
 }
 
 /* Material declares
@@ -560,3 +585,93 @@ html .md-footer-meta.md-typeset a:hover {
   color: var(--md-typeset-a-color);
   margin-bottom: 0.75rem;
 }
+
+/* ---------- Author identifier icons ------------------------
+   ORCID and INSPIRE badges after a contributor's name in the section status
+   banner. The name itself is plain text: linking it made credit ambiguous,
+   because a reader could not tell whether the link led to the person or to
+   the section they wrote.
+
+   Icons come from overrides/.icons/academicons/, so they are inlined as SVG
+   and inherit currentColor. Nothing is loaded from a CDN. */
+.md-typeset a.hg-idlink {
+  /* Deliberately left inline. As an inline-block the link grew its own line
+     box, and its baseline then came from that box rather than from the glyph,
+     which fought the vertical-align below and cropped the icon. Inline padding
+     still paints the hover chip without affecting line height. */
+  /* The site-wide permanent underline is an affordance for prose links. Under
+     a 1em glyph it reads as an artifact, so it is dropped here and the hover
+     cue is carried by color and a background chip instead. */
+  text-decoration: none;
+  color: var(--hg-idlink-color);
+  padding: var(--hg-idlink-pad);
+  margin-left: var(--hg-idlink-gap);
+  border-radius: 3px;
+  transition: color 120ms ease, background-color 120ms ease;
+}
+
+/* Material sizes an icon through one custom property:
+     .md-typeset .twemoji { --md-icon-size: 1.125em; height: var(--md-icon-size) }
+     .md-typeset .twemoji svg { width: var(--md-icon-size); max-height: 100% }
+   Setting width/height on the span alone left the svg still asking for
+   1.125em against a shorter box, and the glyph got cropped. Overriding the
+   variable instead keeps the span and the svg in agreement.
+
+   It has to be set on .twemoji itself, not inherited from the link: the
+   property is declared on that element, and an element's own declaration
+   beats an inherited value however specific the ancestor rule is. */
+.md-typeset a.hg-idlink .twemoji {
+  --md-icon-size: var(--hg-idlink-size);
+  /* Offsets the glyph's bottom edge from the text baseline, so the icon
+     centres on the capitals. */
+  vertical-align: var(--hg-idlink-shift);
+}
+
+.md-typeset a.hg-idlink:hover,
+.md-typeset a.hg-idlink:focus-visible {
+  color: var(--hg-link-hover);
+  background: var(--hg-surface-hover);
+  text-decoration: none;
+}
+
+/* Two icons on the same author sit tighter than the first does to the name.
+   Scoped to .hg-author: `+` skips text nodes, so unscoped it also matched the
+   next author's first icon across the separating comma. */
+.md-typeset .hg-author a.hg-idlink + a.hg-idlink {
+  margin-left: var(--hg-idlink-gap-inner);
+}
+
+/* ---------- Section status banner spacing ------------------
+   The banner's rows are separate paragraphs, so their vertical rhythm is a
+   margin rather than a hardcoded line break in the hook. .hg-status is added
+   by hooks/section_status.py via the admonition's extra class, which keeps
+   these rules off every other abstract admonition on the site.
+
+   Wording and delimiters are not here: they are in sections/_config.yml under
+   status_banner. */
+.md-typeset .admonition.hg-status > p,
+.md-typeset details.hg-status > p {
+  margin-top: var(--hg-status-row-gap);
+  margin-bottom: var(--hg-status-row-gap);
+}
+
+.md-typeset .admonition.hg-status > p:last-child {
+  margin-bottom: var(--hg-status-pad-bottom);
+}
+
+/* Field labels are bold; this keeps the label column from crowding its value
+   when a name wraps onto a second line on narrow screens. */
+.md-typeset .admonition.hg-status > p > strong:first-child {
+  margin-right: var(--hg-status-label-gap);
+}
+
+/* Brand colors, off by default.
+   ORCID's display guidelines ask for the green iD icon wherever an iD is
+   shown. Monochrome keeps the banner calm and matches the rest of the site,
+   so the choice is left explicit rather than silent: uncomment to comply
+   literally. Hover still resolves to the accent either way. */
+/*
+.md-typeset a.hg-idlink--orcid  { color: #a6ce39; }
+.md-typeset a.hg-idlink--inspire { color: #1f4e79; }
+[data-md-color-scheme="slate"] .md-typeset a.hg-idlink--inspire { color: #6fa8dc; }
+*/

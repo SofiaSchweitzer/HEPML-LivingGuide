@@ -43,7 +43,8 @@ the section.
    Recommended starting points, Curated paper list, Benchmarks/datasets/software,
    and Cross-references. See [Simulation](applications/simulation.md)
    for a worked template.
-3. **Submit a pull request.** Include your name, affiliation, and a date stamp.
+3. **Submit a pull request.** Include your name, a date stamp, and your ORCID or
+   INSPIRE id if you want to be findable.
 4. **Get credited.** Authors of section-level contributions are listed by name on
    the section they wrote, providing a concrete and citable record.
 
@@ -53,7 +54,7 @@ the section.
   not just that it exists.
 - **Annotated.** Every entry should have at least a sentence of context. A bare
   link is a search result, not a guide entry.
-- **Scoped.** Three to six starting points; a manageable curated list (often
+- **Scoped.** Three to six starting points and a manageable curated list (often
   fewer than 30 entries). If you find yourself listing everything, you have
   drifted back into the old Living Review model.
 - **Honest about boundaries.** If a topic spans two sections, cross-reference
@@ -69,19 +70,29 @@ four fields there — see `sections/simulation.yml` for a filled-in example:
 status: published          # stub -> draft -> published
 authors:
   - name: Your Name
-    affiliation: Your Institute
-    orcid: 0000-0000-0000-0000
+    orcid: 0000-0000-0000-0000   # optional
+    inspire: 1234567             # optional
 stewards: [yourgithubhandle]
 last_reviewed: 2026-08-05
 ```
 
-Names link to their ORCID where one is given, and the citation block at the
-foot of the page is generated from the same entry. The status banner at the top of every
-section page is generated from it — never write one by hand.
+Names render as plain text with small ORCID and INSPIRE badges after them,
+linking to your profiles. Give one, both, or neither. We do not list
+affiliations, because they date faster than the sections do, and a persistent
+identifier answers "who is this?" better than a job title does.
+
+Your INSPIRE id is the number in your author page URL, so
+`https://inspirehep.net/authors/1234567` means `inspire: 1234567`. The older
+dotted form works too. ORCID iDs are checked against their check digit when the
+site builds, so a mistyped one shows up as a warning rather than as a link to
+somebody else.
+
+The citation block at the foot of the page is generated from the same entry, as
+is the status banner at the top — never write either by hand.
 
 If `last_reviewed` is more than 12 months old, the page automatically displays a
 notice telling readers the recommendations may no longer be current. This is not a
-criticism of the authors; it is a statement to the reader about what they are
+criticism of the authors but it is a statement to the reader about what they are
 looking at. Confirming that a section still holds and bumping the date is itself a
 real contribution, and clears the notice.
 

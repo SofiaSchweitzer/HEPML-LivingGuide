@@ -31,7 +31,7 @@ adopted in production versus what remains a demonstration.
 ## Recommended starting points
 
 - **A survey of machine learning-based physics event generation**, Alanazi et al. (2021) ([arXiv:2106.00643](https://arxiv.org/abs/2106.00643)) — *a survey of ML-based physics event generation, complementary in emphasis to the Snowmass report*
-- **Machine Learning and LHC Event Generation**, Badger et al. (2022) ([arXiv:2203.07460](https://arxiv.org/abs/2203.07460)) — *the Snowmass report on ML for LHC event generation; the best entry point for the generation half of the chain*
+- **Machine Learning and LHC Event Generation**, Badger et al. (2022) ([arXiv:2203.07460](https://arxiv.org/abs/2203.07460)) — *the Snowmass report on ML for LHC event generation. The best entry point for the generation half of the chain*
 - **Deep Generative Models for Detector Signature Simulation: An Analytical Taxonomy**, Hashemi et al. (2023) ([arXiv:2312.09597](https://arxiv.org/abs/2312.09597)) — *an analytical taxonomy of generative models for detector signatures, useful for organizing the architecture zoo*
 - **CaloChallenge 2022: A Community Challenge for Fast Calorimeter Simulation**, Krause et al. (2024) ([arXiv:2410.21611](https://arxiv.org/abs/2410.21611)) — *the CaloChallenge: a controlled comparison of detector surrogates on shared data with agreed metrics*
 

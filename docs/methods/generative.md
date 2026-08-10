@@ -18,8 +18,8 @@ The architectural history runs adversarial models, variational autoencoders,
 normalizing flows, and then diffusion, score-based, and conditional flow matching-based models, with transformers and
 autoregressive approaches cutting across. Each transition was driven at least as much
 by trainability and evaluability as by fidelity: GANs produced good samples but were
-unstable and gave no likelihood; flows gave likelihoods at an architectural cost;
-diffusion gave quality and stability but is slow to sample; and conditional flow matching simplified the training objective for high-fidelity samples.
+unstable and gave no likelihood, flows gave likelihoods at an architectural cost,
+diffusion gave quality and stability but is slow to sample, and conditional flow matching simplified the training objective for high-fidelity samples.
 
 ## Recommended starting points
 

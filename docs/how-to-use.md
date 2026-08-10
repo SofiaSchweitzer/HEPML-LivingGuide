@@ -12,12 +12,12 @@ transition paper that introduced this resource:
    work. A list of links without context is a search result, not a guide.
 4. **Complement INSPIRE-HEP and arXiv, do not compete with them.** Comprehensive
    bibliographic search already exists and works well. Finding papers is your
-   job and the search engines' job; the Guide's job is telling you which few are
-   worth reading first, and why. It provides what those tools do not: structured
-   context and explicit guidance on where to start.
+   job and the search engines' job. The Guide's job is telling you which few are
+   worth reading first, and why. It provides what those tools do not and provides 
+   a structured context and explicit guidance on where to start.
 5. **Sustainability by design.** Sections are written as named, timestamped
    one-time contributions and remain stable until a new contribution updates them.
-   A stale bibliography is merely incomplete; a stale guide is misleading, so every
+   A stale bibliography is merely incomplete, while a stale guide is misleading, so every
    section displays when it was last reviewed and automatically carries a notice
    once that is more than **12 months** ago. You should never have to guess the
    vintage of a recommendation.

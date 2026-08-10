@@ -40,16 +40,16 @@ the field is.
 physics, lattice field theory, and neutrino physics. Work belongs here when either
 the physics problem or the methodological development is specific to this domain.
 
-**Out of scope.** Nuclear and heavy-ion physics; astroparticle physics, cosmology,
-and astronomical data science; machine learning for accelerator design and
-operation; and generic machine-learning methodology with no
+**Out of scope.** Nuclear and heavy-ion physics, astroparticle physics, cosmology,
+and astronomical data science, machine learning for accelerator design and
+operation, and generic machine-learning methodology with no
 particle-physics-specific content.
 
 This is a deliberate narrowing relative to the archived Living Review, whose title
 referred to particle *and nuclear* physics. It is not a judgment about the value
 of that work. A curated guide has to be answerable for what it recommends, and no
 small group of maintainers can be answerable across that whole span. Several of
-those areas already have their own community-curated resources; where the boundary
+those areas already have their own community-curated resources. Where the boundary
 is genuinely porous, we [cross-link](resources/related.md) rather than duplicate.
 
 ## Editorial principles
@@ -74,7 +74,7 @@ The Living Guide is maintained by:
 - **Benjamin Nachman** — SLAC National Accelerator Laboratory & Stanford University
 
 Section authors are credited individually on the sections they contribute. The
-maintainers coordinate and keep the infrastructure running; the content belongs
+maintainers coordinate and keep the infrastructure running, while the content belongs
 to the people who write it.
 
 ## Acknowledgments
