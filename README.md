@@ -16,17 +16,6 @@ researchers navigating a now mature and rapidly diversifying field. See the
 [About](https://iml-wg.github.io/HEPML-LivingGuide/about/) page for the full
 rationale.
 
-## Local preview
-
-```bash
-git clone git@github.com:iml-wg/HEPML-LivingGuide.git
-cd HEPML-LivingGuide
-pip install -r requirements.txt
-mkdocs serve
-```
-
-Then open <http://127.0.0.1:8000>.
-
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the short version, or the
