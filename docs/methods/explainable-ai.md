@@ -15,11 +15,11 @@ it does onto physics you already know. A symbolic expression is interpretable, w
 knowing that a tagger uses the same soft radiation pattern as a known observable is 
 an explanation.
 
-The practical toolkit divides along a related line. **Attribution** methods take a
+The practical toolkit divides along a related line. *Attribution* methods take a
 trained network as given and ask which inputs drove a decision: Shapley values and
 their SHAP approximations, layer-wise relevance propagation, saliency maps,
 permutation importance. They are model-agnostic, cheap to bolt onto an existing
-analysis, and they answer "which variables mattered". **Distillation** methods
+analysis, and they answer "which variables mattered". *Distillation* methods
 instead replace the network with something a physicist can read, usually a closed-form
 expression found by symbolic regression. They are expensive and do not always succeed,
 but when they do the output is an equation you can differentiate, publish, and argue
