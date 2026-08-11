@@ -1,7 +1,17 @@
-# HEP–ML Living Guide
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/logo-dark.png">
+    <img src="docs/assets/logo-light.png" width="200"
+         alt="HEP–ML Living Guide logo: a line-drawn wizard holding an atom wired to a neural network">
+  </picture>
+</p>
 
-[![Deploy site](https://github.com/iml-wg/HEPML-LivingGuide/actions/workflows/deploy.yml/badge.svg)](https://github.com/iml-wg/HEPML-LivingGuide/actions/workflows/deploy.yml)
-[![Site](https://img.shields.io/website?url=https%3A%2F%2Fiml-wg.github.io%2FHEPML-LivingGuide%2F&label=site)](https://iml-wg.github.io/HEPML-LivingGuide/)
+<h1 align="center">HEP–ML Living Guide</h1>
+
+<p align="center">
+  <a href="https://github.com/iml-wg/HEPML-LivingGuide/actions/workflows/deploy.yml"><img src="https://github.com/iml-wg/HEPML-LivingGuide/actions/workflows/deploy.yml/badge.svg" alt="Deploy site"></a>
+  <a href="https://iml-wg.github.io/HEPML-LivingGuide/"><img src="https://img.shields.io/website?url=https%3A%2F%2Fiml-wg.github.io%2FHEPML-LivingGuide%2F&label=site" alt="Site"></a>
+</p>
 
 A community-curated field guide to machine learning for **particle physics**,
 maintained by the HEP–ML community.
