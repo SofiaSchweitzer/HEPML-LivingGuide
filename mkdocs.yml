@@ -32,6 +32,7 @@ nav:
       - Generative models: methods/generative.md
       - Density estimation & likelihood ratios: methods/density-ratio.md
       - Uncertainty quantification & calibration: methods/uncertainty.md
+      - Explainable AI & interpretability: methods/explainable-ai.md
       - Differentiable programming: methods/differentiable.md
       - Foundation models: methods/foundation-models.md
       - LLMs & agents: methods/agents.md
