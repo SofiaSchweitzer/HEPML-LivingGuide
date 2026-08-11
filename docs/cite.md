@@ -6,18 +6,17 @@ paper that introduces it.
 ## BibTeX
 
 ```bibtex
-@article{HEPML-LivingGuide,
-  author       = {Krause, Claudius and Winterhalder, Ramon and Feickert, Matthew and Nachman, Benjamin},
-  title        = {{The Living Guide of Machine Learning for Particle Physics}},
-  year         = {2026},
-  eprint       = {XXXX.XXXXX},
-  archivePrefix= {arXiv},
-  primaryClass = {hep-ph},
-  note         = {Companion resource: \url{https://iml-wg.github.io/HEPML-LivingGuide/}}
+@article{Krause:2026ayh,
+  author = "Krause, Claudius and Winterhalder, Ramon and Feickert, Matthew and Nachman, Benjamin",
+  title = "{The Living Guide of Machine Learning for Particle Physics}",
+  eprint = "2608.09531",
+  archivePrefix = "arXiv",
+  primaryClass = "hep-ph",
+  reportNumber = "MBI-ML-26-05, TIF-UNIMI-2026-10",
+  month = "8",
+  year = "2026"
 }
 ```
-
-*Replace `XXXX.XXXXX` with the arXiv identifier once available.*
 
 ## Citing a specific section
 
