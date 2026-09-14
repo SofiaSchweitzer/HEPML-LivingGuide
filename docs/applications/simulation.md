@@ -42,7 +42,7 @@ adopted in production versus what remains a demonstration.
 ### Amplitudes and matrix elements
 
 - **Using neural networks for efficient evaluation of high multiplicity scattering amplitudes**, Badger et al. (2020) ([arXiv:2002.07516](https://arxiv.org/abs/2002.07516)) — *among the first amplitude surrogates, and the one that set the agenda: at high multiplicity the evaluation cost grows factorially, and the network has to be right in the infrared regions where the amplitude diverges. Everything below is a response to that problem*
-- **A factorisation-aware Matrix element emulator**, Ma^itre et al. (2021) ([arXiv:2107.06625](https://arxiv.org/abs/2107.06625)) — *a factorisation-aware emulator: building the known singular structure into the model rather than making it learn QCD from scratch*
+- **A factorisation-aware Matrix element emulator**, Maître et al. (2021) ([arXiv:2107.06625](https://arxiv.org/abs/2107.06625)) — *a factorisation-aware emulator: building the known singular structure into the model rather than making it learn QCD from scratch*
 - **Loop Amplitudes from Precision Networks**, Badger et al. (2023) ([arXiv:2206.14831](https://arxiv.org/abs/2206.14831)) — *loop amplitudes from precision networks, pushing surrogates to the accuracy NLO calculations need*
 - **Amplitude Uncertainties Everywhere All at Once**, Bahl et al. (2025) ([arXiv:2509.00155](https://arxiv.org/abs/2509.00155)) — *per-prediction uncertainty estimates for learned amplitudes, which is what turns a surrogate from fast into usable: it lets you decide point by point where the network can be trusted and where the exact calculation has to be called instead*
 - **Amplitude Surrogates for Multi-Jet Processes**, Beccatini et al. (2025) ([arXiv:2512.11036](https://arxiv.org/abs/2512.11036)) — *puts the uncertainty estimates to work: the surrogate is invoked or bypassed according to its own predicted error, so the exact calculation is only called where it is actually needed*
@@ -52,7 +52,7 @@ adopted in production versus what remains a demonstration.
 - **Efficient Monte Carlo Integration Using Boosted Decision Trees and Generative Deep Neural Networks**, Bendavid (2017) ([arXiv:1707.00028](https://arxiv.org/abs/1707.00028)) — *the pre-neural baseline using boosted decision trees, useful for seeing what the learned methods actually improved on*
 - **Neural Network-Based Approach to Phase Space Integration**, Klimek et al. (2018) ([arXiv:1810.11509](https://arxiv.org/abs/1810.11509)) — *the first neural approach to phase-space integration, framing the problem as learning a change of variables*
 - **Exploring phase space with Neural Importance Sampling**, Bothmann et al. (2020) ([arXiv:2001.05478](https://arxiv.org/abs/2001.05478)) — *neural importance sampling for phase space*
-- **Event Generation with Normalizing Flows**, Gao et al. (2020) ([arXiv:2001.10028](https://arxiv.org/abs/2001.10028)) — *neural importance sampling for phase space, independentfrom, but simultaneously to Bothmann et al.*
+- **Event Generation with Normalizing Flows**, Gao et al. (2020) ([arXiv:2001.10028](https://arxiv.org/abs/2001.10028)) — *neural importance sampling for phase space, independent from, but simultaneously to Bothmann et al.*
 - **MadNIS -- Neural Multi-Channel Importance Sampling**, Heimel et al. (2022) ([arXiv:2212.06172](https://arxiv.org/abs/2212.06172)) — *MadNIS: multi-channel importance sampling combining learned maps with the channel decomposition generators already use*
 
 ### Event generation and unweighting
@@ -66,10 +66,10 @@ adopted in production versus what remains a demonstration.
 ### Detector simulation
 
 - **Learning Particle Physics by Example: Location-Aware Generative Adversarial Networks for Physics Synthesis**, de Oliveira et al. (2017) ([arXiv:1701.05927](https://arxiv.org/abs/1701.05927)) — *LAGAN: the first location-aware generative model for calorimeter images, and the paper that opened the area*
-- **CaloGAN : Simulating 3D high energy particle showers in multilayer electromagnetic calorimeters with generative adversarial networks**, Paganini et al. (2018) ([arXiv:1712.10321](https://arxiv.org/abs/1712.10321)) — *CaloGAN: three-dimensional multi-layer showers, setting the problem template still in use*
+- **CaloGAN: Simulating 3D high energy particle showers in multilayer electromagnetic calorimeters with generative adversarial networks**, Paganini et al. (2018) ([arXiv:1712.10321](https://arxiv.org/abs/1712.10321)) — *CaloGAN: three-dimensional multi-layer showers, setting the problem template still in use*
 - **CaloFlow: Fast and Accurate Generation of Calorimeter Showers with Normalizing Flows**, Krause et al. (2021) ([arXiv:2106.05285](https://arxiv.org/abs/2106.05285)) — *CaloFlow: tractable likelihoods for shower generation, first application of normalizing flows to detector simulation, good quality based on new classifier test*
 - **Score-based Generative Models for Calorimeter Shower Simulation**, Mikuni et al. (2022) ([arXiv:2206.11898](https://arxiv.org/abs/2206.11898)) — *score-based diffusion for showers*
-- **CaloDREAM – Detector response emulation via attentive flow matching**, Favaro et al. (2024) ([arXiv:2405.09629](https://arxiv.org/abs/2405.09629))— *conditional flow matching with transformer elements. *
+- **CaloDREAM – Detector response emulation via attentive flow matching**, Favaro et al. (2024) ([arXiv:2405.09629](https://arxiv.org/abs/2405.09629)) — *conditional flow matching with transformer elements.*
 
 ### Evaluation and validation
 

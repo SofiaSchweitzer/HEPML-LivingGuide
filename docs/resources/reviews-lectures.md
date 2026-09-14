@@ -56,7 +56,7 @@ Grouped by the section of the Guide they serve.
 - **Deep Generative Models for Detector Signature Simulation: An Analytical Taxonomy**, Hashemi et al. ([arXiv:2312.09597](https://arxiv.org/abs/2312.09597)) — an analytical taxonomy of generative models for detector signatures.
 - **A Comprehensive Evaluation of Generative Models in Calorimeter Shower Simulation**, Ahmad et al. ([arXiv:2406.12898](https://arxiv.org/abs/2406.12898)) — a comprehensive evaluation of generative models for shower simulation.
 - **CaloChallenge 2022: A Community Challenge for Fast Calorimeter Simulation**, Krause et al. ([arXiv:2410.21611](https://arxiv.org/abs/2410.21611)) — the CaloChallenge: a controlled comparison with agreed metrics.
-- **A First Full Physics Benchmark for Highly Granular Calorimeter Surrogates**,  ([arXiv:2511.17293](https://arxiv.org/abs/2511.17293)) — a full physics benchmark for highly granular calorimeter surrogates.
+- **A First Full Physics Benchmark for Highly Granular Calorimeter Surrogates**, Buss et al. ([arXiv:2511.17293](https://arxiv.org/abs/2511.17293)) — a full physics benchmark for highly granular calorimeter surrogates.
 
 ### [Unfolding & simulation-based inference](../applications/unfolding-inference.md)
 
@@ -101,7 +101,7 @@ Grouped by the section of the Guide they serve.
 
 - **Dealing with Nuisance Parameters using Machine Learning in High Energy Physics: a Review**, Dorigo et al. ([arXiv:2007.09121](https://arxiv.org/abs/2007.09121)) — handling nuisance parameters with machine learning.
 - **Solving Simulation Systematics in and with AI/ML**, Viren et al. ([arXiv:2203.06112](https://arxiv.org/abs/2203.06112)) — on solving simulation systematics in and with ML.
-- **Uncertainty in Physics and AI: Taxonomy, Quantification, and Validation**, Haussmann et al. (2026) ([arXiv:2605.10378](https://arxiv.org/abs/2605.10378)) — on the various sources of uncertainty and their validation
+- **Uncertainty in Physics and AI: Taxonomy, Quantification, and Validation**, Haussmann et al. ([arXiv:2605.10378](https://arxiv.org/abs/2605.10378)) — on the various sources of uncertainty and their validation.
 
 ### [Lattice field theory](../applications/lattice.md)
 
